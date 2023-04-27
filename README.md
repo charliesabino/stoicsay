@@ -28,3 +28,17 @@ $ stoicsay | cowsay
                 ||     ||
 
 ```
+
+### Installation
+
+#### Install Rustup
+
+```
+$ curl https://sh.rustup.rs -sSf | sh
+```
+
+#### Install stoicsay
+
+```
+$ cargo install stoicsay
+```
