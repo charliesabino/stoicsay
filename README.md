@@ -4,6 +4,8 @@ Stoicsay is a tool that prints a random quote from the greatest stoic thinkers t
 
 ### Examples
 
+#### Standalone
+
 ```
 $ stoicsay
 Manage all your actions, words, and thoughts accordingly, since you may at any moment quit life.
