@@ -1,5 +1,7 @@
 use reqwest::Error;
 use serde_derive::Deserialize;
+use term_size;
+use textwrap;
 use tokio;
 
 #[derive(Deserialize, Debug)]
@@ -11,8 +13,9 @@ struct Quote {
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     let quote = fetch_stoic_quote().await?;
-    println!("\"{}\"\n- {}", quote.text, quote.author);
-
+    let width = term_size::dimensions().map(|(w, _)| w).unwrap_or(80);
+    let wrapped_text = textwrap::fill(&quote.text, width);
+    println!("{}\n- {}", wrapped_text, quote.author);
     Ok(())
 }
 
