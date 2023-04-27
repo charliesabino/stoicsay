@@ -10,7 +10,7 @@ Manage all your actions, words, and thoughts accordingly, since you may at any m
 - Marcus Aurelius
 ```
 
-###### Combined with cowsay
+#### Combined with cowsay
 
 ```
 $ stoicsay | cowsay
